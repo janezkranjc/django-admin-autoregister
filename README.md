@@ -50,6 +50,8 @@ All your models should now be registered in the admin.
     'admin.LogEntry',]'`
   - `ADMIN_AUTOREGISTER_EXCLUDE_INLINES` is a boolean that determines whether or not to exclude models that are already registered as inlines of other models.
     - Defaults to `True`
+  - `ADMIN_AUTOREGISTER_UNREGISTER_LIST` is a list of models to unregister from admin. This is usefull when you want to unregister models from other apps such as Celery, Oauth which are registered by default.
+    - Defaults to `[]` 
 
 Mixins
 ------
