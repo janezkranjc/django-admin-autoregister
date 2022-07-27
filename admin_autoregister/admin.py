@@ -37,7 +37,6 @@ unregister_models = [model for model in apps.get_models()
                                                 model_name=model._meta.model_name) in ADMIN_AUTOREGISTER_UNREGISTER_LIST]
 
 for model in unregister_models:
-    print(model)
     try:
         admin.site.unregister(model)
     except admin.sites.NotRegistered:
